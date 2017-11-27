@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jquery.js"></script>
+    <script src ="script.js"></script>
+  
+    <script>
+        $(document).on('click','input.btn', function(){
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(table.length);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            cell1.innerHTML = document.getElementById("first").value;
+            cell2.innerHTML = document.getElementById("last").value;
+            cell3.innerHTML = document.getElementById("email").value;
+            cell4.innerHTML = document.getElementById("phone").value;
+
+            document.getElementById("first").value = "";
+            document.getElementById("last").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            
+            });
+
+        
+    
+    </script>
+</head>
+<body>
+    <table id= "myTable" style="width:30%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th> 
+            <th>email</th>
+            <th>Contact #</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td> 
+            <td>jsmith@email.com</td>
+            <td>555-555-5555</td>
+        </tr>
+    </table>
+    <!-- End of Table -->
+    <form>
+        <div class="element1">
+            <label>First Name:</label>
+            <input type="text" id="first">
+        </div>
+        <div class ="element2">
+            <label>Last Name:</label>
+            <input type="text" id="last">
+        </div>
+        <div class ="element3">
+            <label>Email Address:</label>
+            <input type="text" id="email" placeholder="ex. me@website.com">
+        </div>
+        <div class ="element4">
+            <label>Phone Number:</label>
+            <input type="text" id="phone" placeholder="555-555-5555">
+        </div>
+       <input type="button" value="Add User" class ="btn">
+    </form>
+
+    
+</body>
+</html>
